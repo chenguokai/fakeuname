@@ -150,8 +150,24 @@ int main(int argc, char* argv[]) {
 	int len = arg.length();
 	if (arg[0] != '-') {
 		std::cout<<USAGE_MSG;
+		return 0;
 	}
-	
+	if (arg[1] == 'm') {
+		std::cout<<"x86_64\n";
+		return 0;
+	}
+	if (arg[1] == 'r') {
+		std::cout<<"4.15.0-29deepin-generic\n";
+		return 0;
+	}
+	if (arg[1] == 's') {
+		std::cout<<"Linux\n";
+		return 0;
+	}
+	if (arg[1] == 'v') {
+		std::cout<<"#31 SMP Fri Jul 27 07:12:08 UTC 2018\n";
+		return 0;
+	}
 	
 	return 0;
 }
